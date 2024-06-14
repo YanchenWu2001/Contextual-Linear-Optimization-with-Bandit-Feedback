@@ -1,0 +1,1236 @@
+start
+################
+#  no_kernel   #
+################
+n_train 400
+Direct Model
+total time:  3668.932614326477
+seperate time
+SPO_wrong      1788.944625
+ETO_wrong        24.584076
+SPO_correct    1769.908501
+ETO_correct      22.066421
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.607543
+ETO_wrong           0.802454
+SPO_correct         0.459880
+ETO_correct         0.432392
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Linear Wrong Direct Model
+total time:  3773.3840272426605
+seperate time
+SPO_wrong      1821.140865
+ETO_wrong        24.410021
+SPO_correct    1839.298398
+ETO_correct      21.841258
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.825634
+ETO_wrong           1.866933
+SPO_correct         1.833418
+ETO_correct         1.873404
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Linear Wrong Double Robust Tree Sigma
+total time:  3762.7460985183716
+seperate time
+SPO_wrong      1834.169963
+ETO_wrong        20.927173
+SPO_correct    1816.418066
+ETO_correct      21.864490
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.685333
+ETO_wrong           2.327866
+SPO_correct         1.718288
+ETO_correct         2.369139
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  3208.9426810741425
+seperate time
+SPO_wrong      1849.049989
+ETO_wrong        24.487017
+SPO_correct    1242.606377
+ETO_correct      11.723121
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.688843
+ETO_wrong           1.838394
+SPO_correct         1.709790
+ETO_correct         1.817591
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  2434.398936033249
+seperate time
+SPO_wrong      1213.063773
+ETO_wrong        15.929860
+SPO_correct    1100.125598
+ETO_correct      11.296644
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.718371
+ETO_wrong           1.855544
+SPO_correct         1.728032
+ETO_correct         1.833746
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Double Robust With Sample Sigma Matrix Tree
+total time:  2443.16739654541
+seperate time
+SPO_wrong      1218.724128
+ETO_wrong        16.722147
+SPO_correct    1126.119441
+ETO_correct      11.155131
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.740026
+ETO_wrong           1.364366
+SPO_correct         0.533813
+ETO_correct         1.090239
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  2999.9553949832916
+seperate time
+SPO_wrong      1217.553691
+ETO_wrong        16.304147
+SPO_correct    1621.495166
+ETO_correct      20.951817
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.640122
+ETO_wrong           0.778853
+SPO_correct         0.454786
+ETO_correct         0.406936
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  3766.2738115787506
+seperate time
+SPO_wrong      1844.856630
+ETO_wrong        24.567192
+SPO_correct    1794.148056
+ETO_correct      21.529610
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.606728
+ETO_wrong           0.761051
+SPO_correct         0.432992
+ETO_correct         0.386150
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Direct Model
+total time:  3839.836431503296
+seperate time
+SPO_wrong      1878.508102
+ETO_wrong        24.514569
+SPO_correct    1843.865249
+ETO_correct      21.912652
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.388942
+ETO_wrong           0.596353
+SPO_correct         0.249571
+ETO_correct         0.237683
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Linear Wrong Direct Model
+total time:  4316.414556503296
+seperate time
+SPO_wrong      1839.285544
+ETO_wrong        24.568497
+SPO_correct    2343.121131
+ETO_correct      28.981827
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.760624
+ETO_wrong           1.777972
+SPO_correct         1.767793
+ETO_correct         1.787938
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Linear Wrong Double Robust Tree Sigma
+total time:  5059.290422201157
+seperate time
+SPO_wrong      2437.786321
+ETO_wrong        32.311803
+SPO_correct    2458.110733
+ETO_correct      29.032472
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.527341
+ETO_wrong           2.183800
+SPO_correct         1.598026
+ETO_correct         2.196070
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  5018.905976057053
+seperate time
+SPO_wrong      2418.856644
+ETO_wrong        32.489947
+SPO_correct    2440.949415
+ETO_correct      29.182468
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.564476
+ETO_wrong           1.755016
+SPO_correct         1.588513
+ETO_correct         1.714627
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  5066.919634819031
+seperate time
+SPO_wrong      2433.422096
+ETO_wrong        32.712431
+SPO_correct    2469.993887
+ETO_correct      29.195645
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.608554
+ETO_wrong           1.723655
+SPO_correct         1.600417
+ETO_correct         1.691718
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Double Robust With Sample Sigma Matrix Tree
+total time:  5053.177675008774
+seperate time
+SPO_wrong      2430.904279
+ETO_wrong        32.607521
+SPO_correct    2442.391814
+ETO_correct      29.013185
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.537931
+ETO_wrong           1.050391
+SPO_correct         0.326612
+ETO_correct         0.749039
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  5029.692895412445
+seperate time
+SPO_wrong      2420.521795
+ETO_wrong        32.763760
+SPO_correct    2448.169719
+ETO_correct      28.977541
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.433389
+ETO_wrong           0.632366
+SPO_correct         0.249043
+ETO_correct         0.294882
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  5051.896687746048
+seperate time
+SPO_wrong      2458.458024
+ETO_wrong        32.491557
+SPO_correct    2437.954983
+ETO_correct      27.170680
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.422017
+ETO_wrong           0.581283
+SPO_correct         0.246997
+ETO_correct         0.220225
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Direct Model
+total time:  5120.896089315414
+seperate time
+SPO_wrong      2515.601064
+ETO_wrong        32.554272
+SPO_correct    2455.181804
+ETO_correct      29.667006
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.275454
+ETO_wrong           0.499550
+SPO_correct         0.136875
+ETO_correct         0.131855
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Linear Wrong Direct Model
+total time:  5142.427175521851
+seperate time
+SPO_wrong      2497.137637
+ETO_wrong        32.645583
+SPO_correct    2476.168427
+ETO_correct      29.082662
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.658380
+ETO_wrong           1.705032
+SPO_correct         1.658729
+ETO_correct         1.700716
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Linear Wrong Double Robust Tree Sigma
+total time:  5088.133314371109
+seperate time
+SPO_wrong      2476.766436
+ETO_wrong        32.676279
+SPO_correct    2429.190668
+ETO_correct      29.093626
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.506817
+ETO_wrong           2.102219
+SPO_correct         1.520801
+ETO_correct         2.084584
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  4659.871922492981
+seperate time
+SPO_wrong      2519.756296
+ETO_wrong        32.742798
+SPO_correct    1987.740712
+ETO_correct      21.732931
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.493350
+ETO_wrong           1.666756
+SPO_correct         1.474282
+ETO_correct         1.622069
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  3863.8394298553467
+seperate time
+SPO_wrong      1904.452691
+ETO_wrong        24.513675
+SPO_correct    1832.455823
+ETO_correct      21.473121
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           1.528338
+ETO_wrong           1.668088
+SPO_correct         1.549817
+ETO_correct         1.630509
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Double Robust With Sample Sigma Matrix Tree
+total time:  3902.792818069458
+seperate time
+SPO_wrong      1904.760356
+ETO_wrong        24.471908
+SPO_correct    1897.943947
+ETO_correct      15.190751
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.415622
+ETO_wrong           0.858959
+SPO_correct         0.202748
+ETO_correct         0.522721
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  3039.490479707718
+seperate time
+SPO_wrong      1170.392649
+ETO_wrong        15.402546
+SPO_correct    1705.889290
+ETO_correct      18.234940
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.329222
+ETO_wrong           0.498247
+SPO_correct         0.149424
+ETO_correct         0.128334
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  2914.2532896995544
+seperate time
+SPO_wrong      1713.974193
+ETO_wrong        15.067982
+SPO_correct    1104.105502
+ETO_correct      10.482137
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           0.306351
+ETO_wrong           0.495091
+SPO_correct         0.137699
+ETO_correct         0.123621
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Direct Model
+total time:  2977.715311050415
+seperate time
+SPO_wrong      1202.778072
+ETO_wrong        15.923241
+SPO_correct    1632.716178
+ETO_correct      17.730646
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.230556
+ETO_wrong            0.465607
+SPO_correct          0.090721
+ETO_correct          0.085429
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Linear Wrong Direct Model
+total time:  3738.571469068527
+seperate time
+SPO_wrong      1820.760586
+ETO_wrong        23.591268
+SPO_correct    1799.565952
+ETO_correct      19.480371
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.635334
+ETO_wrong            1.658363
+SPO_correct          1.649139
+ETO_correct          1.658327
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Linear Wrong Double Robust Tree Sigma
+total time:  3699.095538377762
+seperate time
+SPO_wrong      1800.460368
+ETO_wrong        23.113596
+SPO_correct    1784.913503
+ETO_correct      19.575481
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.389685
+ETO_wrong            2.038686
+SPO_correct          1.455256
+ETO_correct          2.010748
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  3712.6904187202454
+seperate time
+SPO_wrong      1781.091659
+ETO_wrong        23.013340
+SPO_correct    1817.147227
+ETO_correct      19.458385
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.450200
+ETO_wrong            1.610766
+SPO_correct          1.469364
+ETO_correct          1.562459
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  3715.137006521225
+seperate time
+SPO_wrong      1800.997465
+ETO_wrong        23.158388
+SPO_correct    1797.701957
+ETO_correct      19.463165
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.490417
+ETO_wrong            1.612845
+SPO_correct          1.490291
+ETO_correct          1.559107
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Double Robust With Sample Sigma Matrix Tree
+total time:  3671.404654979706
+seperate time
+SPO_wrong      1793.288987
+ETO_wrong        23.028601
+SPO_correct    1770.796656
+ETO_correct      19.557910
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.361271
+ETO_wrong            0.713658
+SPO_correct          0.158407
+ETO_correct          0.367612
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  3722.2877321243286
+seperate time
+SPO_wrong      1817.984127
+ETO_wrong        23.145000
+SPO_correct    1793.995107
+ETO_correct      19.922679
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.286762
+ETO_wrong            0.467260
+SPO_correct          0.105804
+ETO_correct          0.083373
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  3685.5339295864105
+seperate time
+SPO_wrong      1804.172758
+ETO_wrong        23.004994
+SPO_correct    1769.147122
+ETO_correct      19.538081
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.266255
+ETO_wrong            0.462435
+SPO_correct          0.097116
+ETO_correct          0.080064
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Direct Model
+total time:  3769.09335231781
+seperate time
+SPO_wrong      1805.303941
+ETO_wrong        22.880619
+SPO_correct    1847.379163
+ETO_correct      19.484726
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.202640
+ETO_wrong            0.441901
+SPO_correct          0.064616
+ETO_correct          0.057784
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Linear Wrong Direct Model
+total time:  3765.584175348282
+seperate time
+SPO_wrong      1827.512151
+ETO_wrong        23.271352
+SPO_correct    1821.483325
+ETO_correct      19.731856
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.627136
+ETO_wrong            1.650333
+SPO_correct          1.617017
+ETO_correct          1.650760
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Linear Wrong Double Robust Tree Sigma
+total time:  3745.671457052231
+seperate time
+SPO_wrong      1806.156807
+ETO_wrong        23.099928
+SPO_correct    1802.632050
+ETO_correct      18.680862
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.368546
+ETO_wrong            1.973545
+SPO_correct          1.446591
+ETO_correct          1.954062
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  3789.0618422031403
+seperate time
+SPO_wrong      1846.147686
+ETO_wrong        23.176054
+SPO_correct    1821.375389
+ETO_correct      19.514770
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.428068
+ETO_wrong            1.553980
+SPO_correct          1.430884
+ETO_correct          1.500708
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  3752.9028465747833
+seperate time
+SPO_wrong      1831.915889
+ETO_wrong        22.934007
+SPO_correct    1799.633426
+ETO_correct      19.493872
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.452244
+ETO_wrong            1.566401
+SPO_correct          1.468984
+ETO_correct          1.529716
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Double Robust With Sample Sigma Matrix Tree
+total time:  3767.3352661132812
+seperate time
+SPO_wrong      1846.412897
+ETO_wrong        22.960669
+SPO_correct    1801.901206
+ETO_correct      19.544118
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.335872
+ETO_wrong            0.701199
+SPO_correct          0.118797
+ETO_correct          0.350850
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  3771.829683303833
+seperate time
+SPO_wrong      1830.123702
+ETO_wrong        23.058198
+SPO_correct    1827.535547
+ETO_correct      19.900436
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.261710
+ETO_wrong            0.444735
+SPO_correct          0.075887
+ETO_correct          0.057096
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  3753.1791820526123
+seperate time
+SPO_wrong      1834.951809
+ETO_wrong        16.008142
+SPO_correct    1810.379244
+ETO_correct      19.718313
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.237021
+ETO_wrong            0.441916
+SPO_correct          0.071211
+ETO_correct          0.055062
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Direct Model
+total time:  2727.569327354431
+seperate time
+SPO_wrong      1426.375380
+ETO_wrong        15.026752
+SPO_correct    1172.207574
+ETO_correct      10.010532
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.187685
+ETO_wrong            0.431392
+SPO_correct          0.050260
+ETO_correct          0.044839
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Linear Wrong Direct Model
+total time:  2776.4622678756714
+seperate time
+SPO_wrong      1246.252782
+ETO_wrong        15.217531
+SPO_correct    1418.958368
+ETO_correct      13.218719
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.527388
+ETO_wrong            1.559120
+SPO_correct          1.544384
+ETO_correct          1.560723
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Linear Wrong Double Robust Tree Sigma
+total time:  2538.684190273285
+seperate time
+SPO_wrong      1256.872443
+ETO_wrong        15.482997
+SPO_correct    1171.203353
+ETO_correct      10.706691
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.281429
+ETO_wrong            1.937137
+SPO_correct          1.377603
+ETO_correct          1.919139
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  2572.926154613495
+seperate time
+SPO_wrong      1252.755454
+ETO_wrong        15.499221
+SPO_correct    1206.246232
+ETO_correct       7.218285
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.353498
+ETO_wrong            1.473330
+SPO_correct          1.366871
+ETO_correct          1.428323
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  2601.3959918022156
+seperate time
+SPO_wrong      1257.324688
+ETO_wrong        14.851856
+SPO_correct    1232.467850
+ETO_correct       9.994338
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.386327
+ETO_wrong            1.497801
+SPO_correct          1.419029
+ETO_correct          1.448257
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Double Robust With Sample Sigma Matrix Tree
+total time:  2514.211798429489
+seperate time
+SPO_wrong      1171.048677
+ETO_wrong        15.494761
+SPO_correct    1231.549625
+ETO_correct      10.269510
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.314179
+ETO_wrong            0.615450
+SPO_correct          0.105390
+ETO_correct          0.266361
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  2499.774177789688
+seperate time
+SPO_wrong      1155.881262
+ETO_wrong        15.958152
+SPO_correct    1230.238780
+ETO_correct      10.796527
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.246315
+ETO_wrong            0.433514
+SPO_correct          0.060529
+ETO_correct          0.044910
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  2508.5226492881775
+seperate time
+SPO_wrong      1172.517289
+ETO_wrong        15.425287
+SPO_correct    1234.626323
+ETO_correct      10.266516
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.221846
+ETO_wrong            0.431615
+SPO_correct          0.056080
+ETO_correct          0.043170
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Direct Model
+total time:  2519.1801896095276
+seperate time
+SPO_wrong      1179.053443
+ETO_wrong         7.598502
+SPO_correct    1226.402736
+ETO_correct      10.367208
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.173665
+ETO_wrong            0.421502
+SPO_correct          0.040343
+ETO_correct          0.034431
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Linear Wrong Direct Model
+total time:  2554.774132490158
+seperate time
+SPO_wrong      1266.676927
+ETO_wrong        14.662355
+SPO_correct    1167.419669
+ETO_correct      10.035406
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.479214
+ETO_wrong            1.501073
+SPO_correct          1.484320
+ETO_correct          1.507135
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Linear Wrong Double Robust Tree Sigma
+total time:  2544.0689396858215
+seperate time
+SPO_wrong      1264.682748
+ETO_wrong        15.157436
+SPO_correct    1155.182955
+ETO_correct       9.995944
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.259273
+ETO_wrong            1.841154
+SPO_correct          1.359113
+ETO_correct          1.825864
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Linear Wrong Double Robust Tree Sigma Clip
+total time:  2581.9477643966675
+seperate time
+SPO_wrong      1269.425046
+ETO_wrong        15.045571
+SPO_correct    1181.626510
+ETO_correct      10.078549
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.338687
+ETO_wrong            1.468071
+SPO_correct          1.329488
+ETO_correct          1.405258
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Linear Wrong Double Robust Tree Sigma Lambda
+total time:  2646.071288585663
+seperate time
+SPO_wrong      1269.688719
+ETO_wrong        15.243167
+SPO_correct    1249.200384
+ETO_correct      10.088433
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            1.373698
+ETO_wrong            1.462996
+SPO_correct          1.376703
+ETO_correct          1.406310
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Double Robust With Sample Sigma Matrix Tree
+total time:  2515.4173464775085
+seperate time
+SPO_wrong      1164.886852
+ETO_wrong        15.332966
+SPO_correct    1253.108393
+ETO_correct      10.418084
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.297302
+ETO_wrong            0.554013
+SPO_correct          0.092867
+ETO_correct          0.175448
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Double Robust With Sample Sigma Matrix Clip Tree
+total time:  2536.9534685611725
+seperate time
+SPO_wrong      1168.083243
+ETO_wrong        14.900546
+SPO_correct    1251.685059
+ETO_correct      10.237933
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.233384
+ETO_wrong            0.451101
+SPO_correct          0.052828
+ETO_correct          0.064282
+n                 1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Double Robust With Sample Sigma Matrix Lambda Tree
+total time:  2501.3933589458466
+seperate time
+SPO_wrong      1162.874167
+ETO_wrong         8.780272
+SPO_correct    1237.729044
+ETO_correct      10.173027
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            0.210665
+ETO_wrong            0.422740
+SPO_correct          0.045037
+ETO_correct          0.033893
+n                 1600.000000
+dtype: float64
+-------
+        
+        

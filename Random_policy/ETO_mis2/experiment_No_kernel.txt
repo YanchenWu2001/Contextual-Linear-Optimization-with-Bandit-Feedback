@@ -1,0 +1,242 @@
+start
+################
+#  no_kernel ETO   #
+################
+n_train 400
+Correct ETO
+total time:  46.54700970649719
+-------
+mean regret: 
+zstar_avg_test     20.299869
+ETO_regret          0.678316
+n                 400.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss     76.902631
+n                   400.000000
+dtype: float64
+-------
+        
+        
+n_train 400
+Wrong ETO
+total time:  43.72982335090637
+-------
+mean regret: 
+zstar_avg_test     20.299869
+ETO_regret          2.240891
+n                 400.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss     92.388707
+n                   400.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Correct ETO
+total time:  49.349485874176025
+-------
+mean regret: 
+zstar_avg_test     20.299869
+ETO_regret          0.378156
+n                 600.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss     76.108209
+n                   600.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Wrong ETO
+total time:  81.43123602867126
+-------
+mean regret: 
+zstar_avg_test     20.299869
+ETO_regret          2.080483
+n                 600.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss     91.209799
+n                   600.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Correct ETO
+total time:  85.82737398147583
+-------
+mean regret: 
+zstar_avg_test     20.299869
+ETO_regret          0.210320
+n                 800.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss     75.753158
+n                   800.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Wrong ETO
+total time:  81.4647307395935
+-------
+mean regret: 
+zstar_avg_test     20.299869
+ETO_regret          1.967256
+n                 800.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss     90.531262
+n                   800.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Correct ETO
+total time:  84.97700572013855
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           0.149464
+n                 1000.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      75.531578
+n                   1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Wrong ETO
+total time:  85.60725951194763
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           1.855599
+n                 1000.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      90.04512
+n                   1000.00000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Correct ETO
+total time:  82.56548309326172
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           0.102347
+n                 1200.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      75.404364
+n                   1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Wrong ETO
+total time:  82.33453559875488
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           1.771080
+n                 1200.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      89.46048
+n                   1200.00000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Correct ETO
+total time:  87.6350371837616
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           0.082731
+n                 1400.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      75.305853
+n                   1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Wrong ETO
+total time:  77.10621166229248
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           1.718100
+n                 1400.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      89.153162
+n                   1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Correct ETO
+total time:  59.93559169769287
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           0.070458
+n                 1600.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      75.248359
+n                   1600.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Wrong ETO
+total time:  61.3023955821991
+-------
+mean regret: 
+zstar_avg_test      20.299869
+ETO_regret           1.692328
+n                 1600.000000
+dtype: float64
+-------
+loss regret: 
+performance_loss      88.441498
+n                   1600.000000
+dtype: float64
+-------
+        
+        

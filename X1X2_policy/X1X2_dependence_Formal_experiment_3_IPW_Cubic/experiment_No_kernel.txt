@@ -1,0 +1,158 @@
+start
+################
+#  no_kernel   #
+################
+n_train 400
+Tree IPW
+total time:  4341.505633592606
+seperate time
+SPO_wrong      2071.563719
+ETO_wrong        29.374117
+SPO_correct    2132.104974
+ETO_correct      26.692591
+n               400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           3.241014
+ETO_wrong           3.077894
+SPO_correct         3.239482
+ETO_correct         3.015267
+n                 400.000000
+dtype: float64
+-------
+        
+        
+n_train 600
+Tree IPW
+total time:  4457.542518377304
+seperate time
+SPO_wrong      2175.657982
+ETO_wrong        29.517136
+SPO_correct    2148.592421
+ETO_correct      27.419963
+n               600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           3.264971
+ETO_wrong           3.056202
+SPO_correct         3.265182
+ETO_correct         3.046684
+n                 600.000000
+dtype: float64
+-------
+        
+        
+n_train 800
+Tree IPW
+total time:  4564.576185464859
+seperate time
+SPO_wrong      2239.232721
+ETO_wrong        29.432307
+SPO_correct    2174.866042
+ETO_correct      27.016586
+n               800.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test     20.874648
+SPO_wrong           3.248843
+ETO_wrong           3.053033
+SPO_correct         3.265644
+ETO_correct         2.986261
+n                 800.000000
+dtype: float64
+-------
+        
+        
+n_train 1000
+Tree IPW
+total time:  4629.202396392822
+seperate time
+SPO_wrong      2273.145213
+ETO_wrong        29.308457
+SPO_correct    2214.744054
+ETO_correct      28.164289
+n              1000.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            3.282284
+ETO_wrong            3.056911
+SPO_correct          3.269295
+ETO_correct          3.033393
+n                 1000.000000
+dtype: float64
+-------
+        
+        
+n_train 1200
+Tree IPW
+total time:  4708.980188846588
+seperate time
+SPO_wrong      2276.762846
+ETO_wrong        20.165922
+SPO_correct    2296.049905
+ETO_correct      26.963724
+n              1200.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            3.285086
+ETO_wrong            3.054113
+SPO_correct          3.290855
+ETO_correct          2.984587
+n                 1200.000000
+dtype: float64
+-------
+        
+        
+n_train 1400
+Tree IPW
+total time:  4808.224200963974
+seperate time
+SPO_wrong      2303.175932
+ETO_wrong        29.364317
+SPO_correct    2347.249577
+ETO_correct      26.638032
+n              1400.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            3.298116
+ETO_wrong            3.019366
+SPO_correct          3.286328
+ETO_correct          2.991502
+n                 1400.000000
+dtype: float64
+-------
+        
+        
+n_train 1600
+Tree IPW
+total time:  4833.903139591217
+seperate time
+SPO_wrong      2324.666349
+ETO_wrong        29.251305
+SPO_correct    2343.719125
+ETO_correct      26.863536
+n              1600.000000
+dtype: float64
+-------
+mean regret: 
+zstar_avg_test      20.874648
+SPO_wrong            3.299034
+ETO_wrong            3.077490
+SPO_correct          3.278117
+ETO_correct          3.000120
+n                 1600.000000
+dtype: float64
+-------
+        
+        
