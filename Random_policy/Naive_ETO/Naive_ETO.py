@@ -29,7 +29,7 @@ def generate_data_interactive(noise_low,noise_high,B_true, n, p, v, polykernel_d
     
     for i in range(n):
         idxs = np.random.randint(0, 70, size=1)
-        #这里我就把70个可行解的方案在feasible list中的索引作为标签
+
         temp_Y_transpose_Z_observed=np.dot(c_observed[:,i],feasible_vector[idxs[0]])
         temp_Y_transpose_Z_expected=np.dot(c_expected[:,i],feasible_vector[idxs[0]])
         Y_transpose_Z_observed[0,i]=temp_Y_transpose_Z_observed
@@ -80,7 +80,7 @@ def oracle_dataset(c, oracle):
 
 
 def ETO_regret(X_train_parameter_matrix,X_test,c_test_exp,A_mat_new,b_vec_new):
-    #先把C中的最优解解出来
+
     sp_oracle = generate_sp_oracle(A_mat_new, b_vec_new, verbose)
     (z_star_test, w_star_test) = oracle_dataset(c_test_exp, sp_oracle)
     zstar_avg_test = np.mean(z_star_test)
@@ -111,7 +111,7 @@ n_jobs = 50
 #numiter = 1000; batchsize = 10; long_factor = 1;
 
 (A_mat, b_vec) = read_A_and_b()
-#这里要保证是概率单纯形，因此还是需要
+
 (A_mat_new,b_vec_new)=read_A_and_b('A_and_b_new.csv')
 feasible_matrix_row=pd.read_excel('feasible_matrix_row.xlsx',header=None)
 feasible_matrix_column=pd.read_excel('feasible_matrix_column.xlsx',header=None)
@@ -217,7 +217,7 @@ data_test=[]
 for i in range(len(data_test_1)):
   data_test.append(np.hstack((data_test_1[i],data_test_2[i])))
 
-#测试集要开上帝视角，给出每个数据点70维的向量
+
 data_test_cost_exp=np.zeros((70,2*n_test))
 for i in range(2*n_test):
     for j in range(70):
@@ -315,13 +315,7 @@ for i in range(len(n_train_seq)):
         data_holdout[k].append(data_holdout_cost_hat)
         data_holdout[k].append(data_holdout_cost_ideal_hat)      
     
-        
-    #在这里使用Nuisacne Model，首先还得注意每个runs之间是独立的,但在每个runs下我训练的回归模型是把训练集和验证集放到一起训练的
-    # for k in range(runs):
-    #     for i in range(len(data_train[k])):
-    #         data_total[k].append(np.hstack((data_train[k][i],data_holdout[k][i])))
-    
-    #将数据分成按照所选择的70个类别
+
     data_train_stratified=[[[] for l in range(70)] for i in range(runs)]
     for k in range(runs):
       unique, counts = np.unique(data_train[k][7], return_counts=True)
@@ -342,7 +336,6 @@ for i in range(len(n_train_seq)):
                    num=num+1
             data_train_stratified[k][m].append(temp_array)
             
-    #数据整理好之后，开始每个决策下训练回归模型计算给定X之后的总cost
     True_parameter_matrix_list=[[] for l in range(runs)]
     False_parameter_matrix_list=[[] for l in range(runs)]
     for k in range(runs):
@@ -373,7 +366,7 @@ for i in range(len(n_train_seq)):
                   temp_array_false[m,:]=c_hat_false
                   temp_array_true[m,:]=c_hat_true        
               else:
-                  #如果没有数据提供给ETO学习，那么我就把系数设成很大很大，希望引导ETO不要选择这个方案
+
                   False_model=LinearRegression(fit_intercept = False)
                   True_model=LinearRegression(fit_intercept = False)
                   X_False=data_train[k][0]
@@ -450,51 +443,6 @@ for i in range(len(n_train_seq)):
     pd.concat(regret_all_Wrong_ETO).to_csv("regret_all_Wrong_ETO.csv", index = False)
    
     
-    
-    # data_holdout_stratified=[[[] for l in range(70)] for i in range(runs)]
-    # for k in range(runs):
-    #   unique, counts = np.unique(data_holdout[k][7], return_counts=True)
-    #   if len(unique)==70:
-    #        counts_new=counts
-    #   else:
-    #        counts_new=np.zeros(70)
-    #        for m in range(len(unique)):
-    #            counts_new[int(unique[m])]=counts[m]
-    #   for m in range(70):
-    #     for l in range(len(data_holdout[k])):
-    #         (a,b)=data_holdout[k][l].shape
-    #         temp_array=np.zeros((a,int(counts_new[m])))
-    #         num=0
-    #         for j in range(n_holdout_true):            
-    #             if data_holdout[k][7][0,j]==m:
-    #                temp_array[:,num]=data_holdout[k][l][:,j]
-    #                num=num+1
-    #         data_holdout_stratified[k][m].append(temp_array)
-            
-    # #数据整理好之后，开始每个决策下训练回归模型计算给定X之后的总cost
-    # for k in range(runs):
-    #     temp_array_false=np.zeros((70,n_holdout_true))
-    #     temp_array_true=np.zeros((70,n_holdout_true))
-    #     for m in range(70):
-    #           (a,b)=data_holdout_stratified[k][m][0].shape
-    #           if b !=0:
-    #               X_False=data_holdout_stratified[k][m][0]
-    #               X_true=data_holdout_stratified[k][m][1]
-    #               Y=data_holdout_stratified[k][m][4]
-    #               False_model=LinearRegression(fit_intercept = False)
-    #               True_model=LinearRegression(fit_intercept = False)
-    #               False_model.fit(np.transpose(X_False), np.transpose(Y))
-    #               True_model.fit(np.transpose(X_true), np.transpose(Y))
-    #               c_hat_false=False_model.predict(np.transpose(data_holdout[k][0]))
-    #               c_hat_true=True_model.predict(np.transpose(data_holdout[k][1]))
-    #               c_hat_false=np.transpose(c_hat_false)
-    #               c_hat_true=np.transpose(c_hat_true)
-    #               temp_array_false[m,:]=c_hat_false
-    #               temp_array_true[m,:]=c_hat_true        
-    #           else:
-    #               temp_array_true[m,:]=100
-    #               temp_array_false[m,:]=100
-    #     data_holdout[k].append(temp_array_false)
-    #     data_holdout[k].append(temp_array_true)
+
     
         

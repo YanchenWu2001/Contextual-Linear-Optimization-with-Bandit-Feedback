@@ -6,6 +6,24 @@ import mkl
 
 mkl.set_num_threads(1)
 
+def ETO_regret(X_train_parameter_matrix,X_test,c_test_exp,A_mat_new,b_vec_new):
+
+    sp_oracle = generate_sp_oracle(A_mat_new, b_vec_new, verbose)
+    (z_star_test, w_star_test) = oracle_dataset(c_test_exp, sp_oracle)
+    zstar_avg_test = np.mean(z_star_test)
+    
+    model_estimate_test=np.dot(X_train_parameter_matrix,X_test)
+    (feasible_num, n_test) = c_test_exp.shape
+    eto_sum=0
+    for i in range(n_test):
+        (z_oracle, w_oracle) = sp_oracle(model_estimate_test[:, i])
+        eto_loss_cur = np.dot(c_test_exp[:,i], w_oracle) - z_star_test[i]
+        eto_sum = eto_sum + eto_loss_cur
+    eto_loss_avg = eto_sum/n_test
+    regret_all = {"zstar_avg_test": zstar_avg_test,
+                 "ETO_regret": eto_loss_avg}
+    
+    return (regret_all,eto_sum)
 def generate_data_interactive(noise_low,noise_high,B_true, n, p, v, polykernel_degree = 3, 
                               noise_half_width = 0.01, constant = 3):
     (d, _) = B_true.shape
@@ -38,66 +56,64 @@ def generate_data_interactive(noise_low,noise_high,B_true, n, p, v, polykernel_d
         idxs_array[0,i]=idxs
     return [X_false, X_true, c_observed, c_expected,Y_transpose_Z_observed,Y_transpose_Z_expected,Z,idxs_array]
 
-def generate_sp_oracle(A_mat, b_vec, verbose = False):
-
-    (m, d) = A_mat.shape
-
-    model = gp.Model()
-    model.setParam('OutputFlag', verbose)
-    model.setParam("Threads", 1)
-
-    w = model.addVars(d, lb = 0, ub = 1, name = 'w')
-    model.update()
-    for i in range(m):
-        model.addConstr(gp.quicksum(A_mat[i, j] * w[j] for j in range(len(w))) == b_vec[i])
-    model.update()
-
-    def local_oracle(c):
-        if len(c) != len(w):
-            raise Exception("Sorry, c and w dimension mismatched")
-
-        obj = gp.quicksum(c[i] * w[i] for i in range(len(w)))
-        model.setObjective(obj, GRB.MINIMIZE)
-        model.update()
-        model.optimize()
-
-        w_ast = [w[i].X for i in range(len(w))]
-        z_ast = model.objVal
-
-        return (z_ast, w_ast)
+def Fake_generate_data_interactive(noise_low,noise_high,B_true, n, p,feasible_vector, Fake_feasible_vector,new_feasible_vector_1, 
+                                   new_feasible_vector_2,new_feasible_vector_3,new_feasible_vector_4,polykernel_degree = 3,noise_half_width = 0.01, constant = 3):
+    (d, _) = B_true.shape
+    X = np.random.normal(size=(p, n))
+    #X = np.random.randn(p, n)
+    #X = np.random.uniform(0,2,size=(p,n))
+    poly = PolynomialFeatures(degree = polykernel_degree, interaction_only = True, include_bias = False)
+    X_new = np.transpose(poly.fit_transform(np.transpose(X)))
     
-    return local_oracle
+    c_expected = np.matmul(B_true, X_new) + constant 
+    epsilon =  np.random.uniform(noise_low,noise_high,size=(d,n))
+    c_observed = c_expected + epsilon
 
-def oracle_dataset(c, oracle):
-    (d, n) = c.shape
-    z_star_data = np.zeros(n)
-    w_star_data = np.zeros((d, n))
+    X_true = np.concatenate((np.reshape(np.ones(n), (1, -1)), X_new), axis = 0)
+    X_false = X_true[:6,:]
+    
+    Y_transpose_Z_observed=np.zeros((1,n))
+    Y_transpose_Z_expected=np.zeros((1,n))
+    Z=np.zeros((d,n))
+    idxs_array=np.zeros((1,n))
+    True_idxs_array=np.zeros((1,n))
+
     for i in range(n):
-        (z_i, w_i) = oracle(c[:,i])
-        z_star_data[i] = z_i
-        w_star_data[:,i] = w_i
-    return (z_star_data, w_star_data)
-
-
-def ETO_regret(X_train_parameter_matrix,X_test,c_test_exp,A_mat_new,b_vec_new):
-
-    sp_oracle = generate_sp_oracle(A_mat_new, b_vec_new, verbose)
-    (z_star_test, w_star_test) = oracle_dataset(c_test_exp, sp_oracle)
-    zstar_avg_test = np.mean(z_star_test)
-    
-    model_estimate_test=np.dot(X_train_parameter_matrix,X_test)
-    (feasible_num, n_test) = c_test_exp.shape
-    eto_sum=0
-    for i in range(n_test):
-        (z_oracle, w_oracle) = sp_oracle(model_estimate_test[:, i])
-        eto_loss_cur = np.dot(c_test_exp[:,i], w_oracle) - z_star_test[i]
-        eto_sum = eto_sum + eto_loss_cur
-    eto_loss_avg = eto_sum/n_test
-    regret_all = {"zstar_avg_test": zstar_avg_test,
-                 "ETO_regret": eto_loss_avg}
-    
-    return (regret_all,eto_sum)
-
+        if X_false[1,i]>0 and X_false[2,i]>0:
+          idxs = np.random.randint(0, 75, size=1)
+          temp_Y_transpose_Z_observed=np.dot(c_observed[:,i],new_feasible_vector_1[idxs[0]])
+          temp_Y_transpose_Z_expected=np.dot(c_expected[:,i],new_feasible_vector_1[idxs[0]])
+          Y_transpose_Z_observed[0,i]=temp_Y_transpose_Z_observed
+          Y_transpose_Z_expected[0,i]=temp_Y_transpose_Z_expected
+          Z[:,i]=new_feasible_vector_1[idxs[0]]
+          idxs_array[0,i]=idxs
+        if X_false[1,i]>0 and X_false[2,i]<=0:
+          idxs = np.random.randint(0, 75, size=1)
+          temp_Y_transpose_Z_observed=np.dot(c_observed[:,i],new_feasible_vector_2[idxs[0]])
+          temp_Y_transpose_Z_expected=np.dot(c_expected[:,i],new_feasible_vector_2[idxs[0]])
+          Y_transpose_Z_observed[0,i]=temp_Y_transpose_Z_observed
+          Y_transpose_Z_expected[0,i]=temp_Y_transpose_Z_expected
+          Z[:,i]=new_feasible_vector_2[idxs[0]]
+          idxs_array[0,i]=idxs
+        if X_false[1,i]<=0 and  X_false[2,i]>0:
+          idxs = np.random.randint(0, 100, size=1)
+          temp_Y_transpose_Z_observed=np.dot(c_observed[:,i],new_feasible_vector_3[idxs[0]])
+          temp_Y_transpose_Z_expected=np.dot(c_expected[:,i],new_feasible_vector_3[idxs[0]])
+          Y_transpose_Z_observed[0,i]=temp_Y_transpose_Z_observed
+          Y_transpose_Z_expected[0,i]=temp_Y_transpose_Z_expected
+          Z[:,i]=new_feasible_vector_3[idxs[0]]
+        if X_false[1,i]<=0 and  X_false[2,i]<=0:
+          idxs = np.random.randint(0, 100, size=1)
+          temp_Y_transpose_Z_observed=np.dot(c_observed[:,i],new_feasible_vector_4[idxs[0]])
+          temp_Y_transpose_Z_expected=np.dot(c_expected[:,i],new_feasible_vector_4[idxs[0]])
+          Y_transpose_Z_observed[0,i]=temp_Y_transpose_Z_observed
+          Y_transpose_Z_expected[0,i]=temp_Y_transpose_Z_expected
+          Z[:,i]=new_feasible_vector_4[idxs[0]]
+    for i in range(n):
+        for j in range(70):
+            if (Z[:,i]==feasible_vector[j]).all():
+                True_idxs_array[0,i]=j
+    return [X_false, X_true, c_observed, c_expected,Y_transpose_Z_observed,Y_transpose_Z_expected,Z,idxs_array,True_idxs_array]
 
 n_train_seq = np.array([400,  600,  800,  1000, 1200, 1400, 1600])
 #n_train_seq = np.array([400,  600])
@@ -111,7 +127,6 @@ n_jobs = 50
 #numiter = 1000; batchsize = 10; long_factor = 1;
 
 (A_mat, b_vec) = read_A_and_b()
-
 (A_mat_new,b_vec_new)=read_A_and_b('A_and_b_new.csv')
 feasible_matrix_row=pd.read_excel('feasible_matrix_row.xlsx',header=None)
 feasible_matrix_column=pd.read_excel('feasible_matrix_column.xlsx',header=None)
@@ -205,23 +220,100 @@ X_new = np.transpose(poly.fit_transform(np.transpose(X)))
 
 np.random.seed(18)
 B_true = np.random.rand(n_edges, p2) 
-data_train_1 = [generate_data_interactive(noise_low,noise_high,B_true, n_train_max, p, feasible_vector,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
-data_holdout_1 = [generate_data_interactive(noise_low,noise_high,B_true, n_holdout_max, p, feasible_vector,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
 data_test_1 = generate_data_interactive(noise_low,noise_high,B_true, n_test, p,feasible_vector, polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) 
-
-data_train_2 = [generate_data_interactive(noise_low,noise_high,B_true, n_train_max, p, feasible_vector,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
-data_holdout_2 = [generate_data_interactive(noise_low,noise_high,B_true, n_holdout_max, p, feasible_vector,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
 data_test_2 = generate_data_interactive(noise_low,noise_high,B_true, n_test, p,feasible_vector, polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) 
 
 data_test=[]
 for i in range(len(data_test_1)):
   data_test.append(np.hstack((data_test_1[i],data_test_2[i])))
+  
+def generate_sp_oracle(A_mat, b_vec, verbose = False):
+
+    (m, d) = A_mat.shape
+
+    model = gp.Model()
+    model.setParam('OutputFlag', verbose)
+    model.setParam("Threads", 1)
+
+    w = model.addVars(d, lb = 0, ub = 1, name = 'w')
+    model.update()
+    for i in range(m):
+        model.addConstr(gp.quicksum(A_mat[i, j] * w[j] for j in range(len(w))) == b_vec[i])
+    model.update()
+
+    def local_oracle(c):
+        if len(c) != len(w):
+            raise Exception("Sorry, c and w dimension mismatched")
+
+        obj = gp.quicksum(c[i] * w[i] for i in range(len(w)))
+        model.setObjective(obj, GRB.MINIMIZE)
+        model.update()
+        model.optimize()
+
+        w_ast = [w[i].X for i in range(len(w))]
+        z_ast = model.objVal
+
+        return (z_ast, w_ast)
+    
+    return local_oracle
+
+def oracle_dataset(c, oracle):
+    (d, n) = c.shape
+    z_star_data = np.zeros(n)
+    w_star_data = np.zeros((d, n))
+    for i in range(n):
+        (z_i, w_i) = oracle(c[:,i])
+        z_star_data[i] = z_i
+        w_star_data[:,i] = w_i
+    return (z_star_data, w_star_data)
+
+c_test_exp=data_test[3]
+sp_oracle = generate_sp_oracle(A_mat, b_vec, verbose)
+(z_star_test, w_star_test) = oracle_dataset(c_test_exp, sp_oracle)
+num_list=np.zeros(70)
+for m in range(70):
+  num=0
+  for i in range(2*1000):
+     if (w_star_test[:,i]==feasible_vector[m]).all():
+         num=num+1
+  num_list[m]=num
+
 
 data_test_cost_exp=np.zeros((70,2*n_test))
 for i in range(2*n_test):
     for j in range(70):
       data_test_cost_exp[j,i]=np.dot(data_test[3][:,i],feasible_vector[j])
 data_test.append(data_test_cost_exp)
+
+
+best_list=[63,26,17,1,53,14,38,37,5,50,44,42,68,64,62,33,43,25,12,18]
+Fake_feasible_vector=[]
+for j in range(70):
+    if j not in best_list:
+       Fake_feasible_vector.append(feasible_vector[j])
+       
+new_feasible_vector_1=[]
+new_feasible_vector_2=[]
+new_feasible_vector_3=[]
+new_feasible_vector_4=[]
+
+for i in range(50):
+        new_feasible_vector_1.append(Fake_feasible_vector[i])
+        new_feasible_vector_2.append(Fake_feasible_vector[i])
+        new_feasible_vector_3.append(Fake_feasible_vector[i])
+        new_feasible_vector_4.append(Fake_feasible_vector[i])
+for i in range(25):
+        new_feasible_vector_1.append(Fake_feasible_vector[i])
+        new_feasible_vector_2.append(Fake_feasible_vector[25+i])
+        new_feasible_vector_3.append(Fake_feasible_vector[i])
+        new_feasible_vector_4.append(Fake_feasible_vector[25+i])
+for i in range(25):        
+        new_feasible_vector_3.append(Fake_feasible_vector[i])
+        new_feasible_vector_4.append(Fake_feasible_vector[25+i])
+data_train_1 = [Fake_generate_data_interactive(noise_low,noise_high,B_true, n_train_max, p,feasible_vector, Fake_feasible_vector,new_feasible_vector_1,new_feasible_vector_2,new_feasible_vector_3,new_feasible_vector_4,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
+data_holdout_1 = [Fake_generate_data_interactive(noise_low,noise_high,B_true, n_holdout_max, p,feasible_vector, Fake_feasible_vector,new_feasible_vector_1,new_feasible_vector_2,new_feasible_vector_3,new_feasible_vector_4,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
+data_train_2 = [Fake_generate_data_interactive(noise_low,noise_high,B_true, n_train_max, p,feasible_vector, Fake_feasible_vector,new_feasible_vector_1,new_feasible_vector_2,new_feasible_vector_3,new_feasible_vector_4,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
+data_holdout_2 = [Fake_generate_data_interactive(noise_low,noise_high,B_true, n_holdout_max, p,feasible_vector, Fake_feasible_vector,new_feasible_vector_1,new_feasible_vector_2,new_feasible_vector_3,new_feasible_vector_4,polykernel_degree = polykernel_degree, noise_half_width = noise_half_width, constant = constant) for run in range(runs)]
 
 lambda_max = 100
 num_lambda = 10
@@ -283,7 +375,7 @@ for i in range(len(n_train_seq)):
             data_holdout[k].append(np.hstack((data_holdout_1_used[k][i],data_holdout_2_used[k][i])))
         
     for k in range(runs):
-        unique, counts = np.unique(data_train[k][7], return_counts=True)
+        unique, counts = np.unique(data_train[k][8], return_counts=True)
         if len(unique)==70:
            IPW_score=counts/n_train_true
         else:
@@ -293,13 +385,13 @@ for i in range(len(n_train_seq)):
         data_train_cost_hat=np.zeros((70,n_train_true))
         data_train_cost_ideal_hat=np.zeros((70,n_train_true))
         for j in range(n_train_true):
-            data_train_cost_hat[int(data_train[k][7][0,j]),j]=data_train[k][4][0,j]/IPW_score[int(data_train[k][7][0,j])]
-            data_train_cost_ideal_hat[int(data_train[k][7][0,j]),j]=70*data_train[k][4][0,j]
+            data_train_cost_hat[int(data_train[k][8][0,j]),j]=data_train[k][4][0,j]/IPW_score[int(data_train[k][8][0,j])]
+            data_train_cost_ideal_hat[int(data_train[k][8][0,j]),j]=70*data_train[k][4][0,j]
         data_train[k].append(data_train_cost_hat)
         data_train[k].append(data_train_cost_ideal_hat)
         
     for k in range(runs):
-        unique, counts = np.unique(data_holdout[k][7], return_counts=True)
+        unique, counts = np.unique(data_holdout[k][8], return_counts=True)
         if len(unique)==70:
            IPW_score=counts/n_train_true
         else:
@@ -309,14 +401,16 @@ for i in range(len(n_train_seq)):
         data_holdout_cost_hat=np.zeros((70,n_holdout_true))
         data_holdout_cost_ideal_hat=np.zeros((70,n_holdout_true))
         for j in range(n_holdout_true):
-            data_holdout_cost_hat[int(data_holdout[k][7][0,j]),j]=data_holdout[k][4][0,j]/IPW_score[int(data_holdout[k][7][0,j])]
-            data_holdout_cost_ideal_hat[int(data_holdout[k][7][0,j]),j]=70*data_holdout[k][4][0,j]
+            data_holdout_cost_hat[int(data_holdout[k][8][0,j]),j]=data_holdout[k][4][0,j]/IPW_score[int(data_holdout[k][8][0,j])]
+            data_holdout_cost_ideal_hat[int(data_holdout[k][8][0,j]),j]=70*data_holdout[k][4][0,j]
         data_holdout[k].append(data_holdout_cost_hat)
         data_holdout[k].append(data_holdout_cost_ideal_hat)      
     
+      
+
     data_train_stratified=[[[] for l in range(70)] for i in range(runs)]
     for k in range(runs):
-      unique, counts = np.unique(data_train[k][7], return_counts=True)
+      unique, counts = np.unique(data_train[k][8], return_counts=True)
       if len(unique)==70:
            counts_new=counts
       else:
@@ -329,7 +423,7 @@ for i in range(len(n_train_seq)):
             temp_array=np.zeros((a,int(counts_new[m])))
             num=0
             for j in range(n_train_true):            
-                if data_train[k][7][0,j]==m:
+                if data_train[k][8][0,j]==m:
                    temp_array[:,num]=data_train[k][l][:,j]
                    num=num+1
             data_train_stratified[k][m].append(temp_array)
@@ -337,6 +431,7 @@ for i in range(len(n_train_seq)):
 
     True_parameter_matrix_list=[[] for l in range(runs)]
     False_parameter_matrix_list=[[] for l in range(runs)]
+    
     for k in range(runs):
         temp_array_false=np.zeros((70,n_train_true))
         temp_array_true=np.zeros((70,n_train_true))
@@ -365,7 +460,6 @@ for i in range(len(n_train_seq)):
                   temp_array_false[m,:]=c_hat_false
                   temp_array_true[m,:]=c_hat_true        
               else:
-
                   False_model=LinearRegression(fit_intercept = False)
                   True_model=LinearRegression(fit_intercept = False)
                   X_False=data_train[k][0]
@@ -383,14 +477,14 @@ for i in range(len(n_train_seq)):
         data_train[k].append(temp_array_true)
         data_train[k].append(temp_True_model_parameter)
         data_train[k].append(temp_False_model_parameter)
-   
+
     with open(output, 'a') as f:
         print("n_train", n_train_true, file = f)
         print("n_train", n_train_true)
     time1 = time.time()
     
     #Correct ETO
-    res_temp_0 = Parallel(n_jobs = n_jobs, verbose = 3)(delayed(ETO_regret)(data_train[run][12],data_test[1],data_test[8],A_mat_new,b_vec_new) for run in range(runs))
+    res_temp_0 = Parallel(n_jobs = n_jobs, verbose = 3)(delayed(ETO_regret)(data_train[run][13],data_test[1],data_test[8],A_mat_new,b_vec_new) for run in range(runs))
     regret_temp = [res_0[0] for res_0 in res_temp_0]
     regret_temp = [pd.DataFrame(res_0, index = [0]) for res_0 in regret_temp]
     regret_temp = pd.concat(regret_temp)
@@ -419,7 +513,7 @@ for i in range(len(n_train_seq)):
     time1 = time.time()
     
     #Wrong ETO
-    res_temp_0 = Parallel(n_jobs = n_jobs, verbose = 3)(delayed(ETO_regret)(data_train[run][13],data_test[0],data_test[8],A_mat_new,b_vec_new) for run in range(runs))
+    res_temp_0 = Parallel(n_jobs = n_jobs, verbose = 3)(delayed(ETO_regret)(data_train[run][14],data_test[0],data_test[8],A_mat_new,b_vec_new) for run in range(runs))
     regret_temp = [res_0[0] for res_0 in res_temp_0]
     regret_temp = [pd.DataFrame(res_0, index = [0]) for res_0 in regret_temp]
     regret_temp = pd.concat(regret_temp)
@@ -440,4 +534,6 @@ for i in range(len(n_train_seq)):
         
     regret_all_Wrong_ETO.append(regret_temp)
     pd.concat(regret_all_Wrong_ETO).to_csv("regret_all_Wrong_ETO.csv", index = False)
+
+
         
