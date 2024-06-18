@@ -47,7 +47,7 @@ Random_policy/Naive_SPO+IPW/Naive_SPO+IPW.py --> Random_policy/Naive_SPO+IPW/reg
 
 ● ETO (misspecified degree 2)
 
-Random_policy/ETO_misspecified2/ETO_misspecified2.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> Random_policy/ETO_misspecified2/Regret_ETO.csv --> Random_policy/ETO_misspecified2/Regret_ETO.xlsx
+Random_policy/ETO_misspecified2/ETO_misspecified2.py --> Random_policy/ETO_misspecified2/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> Random_policy/ETO_misspecified2/Regret_ETO.csv --> Random_policy/ETO_misspecified2/Regret_ETO.xlsx
 
 ● ETO (misspecified degree 4)
 
@@ -123,19 +123,81 @@ X1_policy/X1_ISW/X1_ISW.py --> X1_policy/X1_ISW/regret_no_kernel_ISW_Sample.csv 
 
 ● Naive ETO
 
-X1_policy/Naive_ETO/Naive_ETO.py --> X1_policy/Naive_ETO/regret_all_Correct_ETO.csv & regret_all_Wrong_ETO.csv --> Result_processing_example_code.R --> X1_policy/Naive_ETO/Regret_ETO.csv --> X1_policy/Naive_ETO/Regret_ETO.xlsx
+X1_policy/X1_Naive_ETO/X1_Naive_ETO.py --> X1_policy/X1_Naive_ETO/regret_all_Correct_ETO.csv & regret_all_Wrong_ETO.csv --> Result_processing_example_code.R --> X1_policy/X1_Naive_ETO/Regret_ETO.csv --> X1_policy/X1_Naive_ETO/Regret_ETO.xlsx
 
 ● Naive SPO+ DM
 
-X1_policy/Naive_SPO+DM/Naive_SPO+DM.py --> X1_policy/Naive_SPO+DM/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> X1_policy/Naive_SPO+DM/Naive_SPO+DM_result.csv --> X1_policy/Naive_SPO+DM/Naive_SPO+DM_result.xlsx
+X1_policy/X1_Naive_SPO+DM/X1_Naive_SPO+DM.py --> X1_policy/X1_Naive_SPO+DM/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+DM/X1_Naive_SPO+DM_result.csv --> X1_policy/X1_Naive_SPO+DM/X1_Naive_SPO+DM_result.xlsx
 
 ● Naive SPO+ DR
 
-X1_policy/Naive_SPO+DR/Naive_SPO+DR.py --> X1_policy/Naive_SPO+DR/regret_no_kernel_CDR & regret_no_kernel_Wrong_CDR --> Result_processing_example_code.R --> X1_policy/Naive_SPO+DR/Naive_SPO+DR_result.csv --> X1_policy/Naive_SPO+DR/Naive_SPO+DR_result.xlsx
+X1_policy/X1_Naive_SPO+DR/X1_Naive_SPO+DR.py --> X1_policy/X1_Naive_SPO+DR/regret_no_kernel_CDR & regret_no_kernel_Wrong_CDR --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+DR/X1_Naive_SPO+DR_result.csv --> X1_policy/X1_Naive_SPO+DR/X1_Naive_SPO+DR_result.xlsx
 
 ● Naive SPO+ IPW
 
-X1_policy/Naive_SPO+IPW/Naive_SPO+IPW.py --> X1_policy/Naive_SPO+IPW/regret_no_kernel_IPW.csv --> Result_processing_example_code.R --> X1_policy/Naive_SPO+IPW/Naive_SPO+IPW_result.csv --> X1_policy/Naive_SPO+IPW/Naive_SPO+IPW_result.xlsx
+X1_policy/X1_Naive_SPO+IPW/X1_Naive_SPO+IPW.py --> X1_policy/X1_Naive_SPO+IPW/regret_no_kernel_IPW.csv --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+IPW/X1_Naive_SPO+IPW_result.csv --> X1_policy/X1_Naive_SPO+IPW/X1_Naive_SPO+IPW_result.xlsx
 
+### Table 6
 
+● ETO (misspecified degree 2)
+
+X1_policy/X1_ETO_misspecified2/X1_ETO_misspecified2.py --> X1_policy/X1_ETO_misspecified2/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> X1_policy/X1_ETO_misspecified2/Regret_ETO.csv --> X1_policy/X1_ETO_misspecified2/Regret_ETO.xlsx
+
+● ETO (misspecified degree 4)
+
+X1_policy/X1_ETO/X1_ETO.py --> X1_policy/X1_ETO/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> X1_policy/X1_ETO/Regret_ETO.csv --> X1_policy/X1_ETO/Regret_ETO.xlsx
+
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip (Nuisance Model $F^{\text{N}}$ is well-specified and Policy-inducing model $F$ is misspecified degree 4) 
+
+X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_SPO+DM_DR_PI_Lamdba_Clip.py --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model_tree.csv & regret_no_kernel_Sample_Double_Robust_tree.csv & regret_no_kernel_Lambda_Sample_Double_Robust_tree.csv & regret_no_kernel_Clip_Sample_Double_Robust_tree.csv --> Result_processing_example_code.R --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_Nuisance_model_well_specified_result.csv --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_Nuisance_model_well_specified_result.xlsx
+
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip 
+
+1. Nuisance Model $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified 
+2. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4
+
+X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_SPO+DM_DR_PI_Lamdba_Clip.py --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Double_Robust_Tree_Sigma.csv & regret_no_kernel_Lambda_Linear_Wrong_Double_Robust_Tree_Sigma.csv & regret_no_kernel_Clip_Linear_Wrong_Double_Robust_Tree_Sigma.csv --> Result_processing_example_code.R --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_Nuisance_model_misspecified_result.csv --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_Nuisance_model_misspecified_result.xlsx
+
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip (Nuisance Model $F^{\text{N}}$ is well-specified and Policy-inducing model $F$ is misspecified degree 2) 
+
+X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2.py --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/regret_no_kernel_Direct_Model_tree.csv & regret_no_kernel_Sample_Double_Robust_tree.csv & regret_no_kernel_Lambda_Sample_Double_Robust_tree.csv & regret_no_kernel_Clip_Sample_Double_Robust_tree.csv --> Result_processing_example_code.R --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/X1_Nuisance_model_well_specified_result.csv --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/X1_Nuisance_model_well_specified_result.xlsx
+
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip 
+
+1. Nuisance Model $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified 
+2. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2
+
+X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2.py --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Double_Robust_Tree_Sigma.csv & regret_no_kernel_Lambda_Linear_Wrong_Double_Robust_Tree_Sigma.csv & regret_no_kernel_Clip_Linear_Wrong_Double_Robust_Tree_Sigma.csv --> Result_processing_example_code.R --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/X1_Nuisance_model_misspecified2_result.csv --> X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip_misspecified2/X1_Nuisance_model_misspecified2_result.xlsx
+
+● Naive SPO+ DM 
+
+1. Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 4
+2. $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified
+3. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4
+
+X1_policy/X1_Naive_SPO+DM/X1_Naive_SPO+DM.py --> X1_policy/X1_Naive_SPO+DM/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+DM/X1_Naive_SPO+DM_result.csv --> X1_policy/X1_Naive_SPO+DM/X1_Naive_SPO+DM_result.xlsx
+
+● Naive SPO+ DM 
+
+1. Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 2
+2. $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified
+3. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2
+
+X1_policy/X1_Naive_SPO+DM_misspecified2/X1_Naive_SPO+DM_misspecified2.py --> X1_policy/X1_Naive_SPO+DM_misspecified2/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+DM_misspecified2/X1_Naive_SPO+DM_misspecified2_result.csv --> X1_policy/X1_Naive_SPO+DM_misspecified2/X1_Naive_SPO+DM_misspecified2_result.xlsx
+
+● Naive SPO+ DR 
+
+1. Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 4
+2. $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified
+3. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4
+
+X1_policy/X1_Naive_SPO+DR/X1_Naive_SPO+DR.py --> X1_policy/X1_Naive_SPO+DR/regret_no_kernel_CDR & regret_no_kernel_Wrong_CDR --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+DR/X1_Naive_SPO+DR_result.csv --> X1_policy/X1_Naive_SPO+DR/X1_Naive_SPO+DR_result.xlsx
+
+● Naive SPO+ DR 
+
+1. Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 2
+2. $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified
+3. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2
+
+X1_policy/X1_Naive_SPO+DR_misspecified2/X1_Naive_SPO+DR_misspecified2.py --> X1_policy/X1_Naive_SPO+DR_misspecified2/regret_no_kernel_CDR & regret_no_kernel_Wrong_CDR --> Result_processing_example_code.R --> X1_policy/X1_Naive_SPO+DR_misspecified2/X1_Naive_SPO+DR_misspecified2_result.csv --> X1_policy/X1_Naive_SPO+DR_misspecified2/X1_Naive_SPO+DR_misspecified2_result.xlsx
 
