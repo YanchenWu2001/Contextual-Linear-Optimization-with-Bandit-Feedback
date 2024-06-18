@@ -25,3 +25,11 @@ regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_
 ● SPO+ ISW
 
 Random_policy/ISW/ISW.py --> Random_policy/ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> Random_policy/ETO/ISW_result.csv --> Random_policy/ETO/ISW_result.xlsx
+
+● Naive ETO
+
+Random_policy/Naive_ETO/Naive_ETO.py --> Random_policy/Naive_ETO/regret_all_Correct_ETO.csv & regret_all_Wrong_ETO.csv --> Result_processing_example_code.R --> Random_policy/Naive_ETO/Regret_ETO.csv --> Random_policy/Naive_ETO/Regret_ETO.xlsx
+
+● Naive SPO+ DM
+
+Random_policy/Naive_ETO/Naive_ETO.py -->
