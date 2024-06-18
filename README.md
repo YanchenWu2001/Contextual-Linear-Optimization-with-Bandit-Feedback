@@ -19,5 +19,5 @@ Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip: 
 
-Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv &  regret_no_kernel_Clip_Sample_Double_Robust.csv & 
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv &  regret_no_kernel_Clip_Sample_Double_Robust.csv & 
 regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.xlsx
