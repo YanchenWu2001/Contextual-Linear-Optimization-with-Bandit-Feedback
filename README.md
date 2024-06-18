@@ -11,8 +11,25 @@ The X1X2_policy file corresponds to Tables 7 and 8 in the appendix.
 
 The meaning of no kernel in the file name is that we do not use the kernel method, the meaning of tree is that we use the decision tree model to learn the policy in X1_policy and X1X2_policy settings, and the meaning of sample is to estimate the policy according to the probability of occurrence of historical data in Random policy setting.
 
-Table 1 and 3:
+### Table 1 and 3:
 
-● ETO: Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> Random_policy/ETO/Regret_ETO.csv --> Regret_ETO.xlsx
+● ETO: 
 
-● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip: Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/
+Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> Random_policy/ETO/Regret_ETO.csv --> Random_policy/ETO/Regret_ETO.xlsx
+
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip: 
+
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv &  regret_no_kernel_Clip_Sample_Double_Robust.csv & 
+regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.xlsx
+
+● SPO+ ISW
+
+Random_policy/ISW/ISW.py --> Random_policy/ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> Random_policy/ETO/ISW_result.csv --> Random_policy/ETO/ISW_result.xlsx
+
+● Naive ETO
+
+Random_policy/Naive_ETO/Naive_ETO.py --> Random_policy/Naive_ETO/regret_all_Correct_ETO.csv & regret_all_Wrong_ETO.csv --> Result_processing_example_code.R --> Random_policy/Naive_ETO/Regret_ETO.csv --> Random_policy/Naive_ETO/Regret_ETO.xlsx
+
+● Naive SPO+ DM
+
+Random_policy/Naive_ETO/Naive_ETO.py -->
