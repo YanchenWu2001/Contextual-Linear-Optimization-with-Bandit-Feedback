@@ -6,3 +6,5 @@ The Random_policy file corresponds to Tables 1 and 2 in the body of the paper, a
 The X1_policy file corresponds to Tables 5 and 6 in the appendix.
 
 The X1X2_policy file corresponds to Tables 7 and 8 in the appendix.
+
+## Details
