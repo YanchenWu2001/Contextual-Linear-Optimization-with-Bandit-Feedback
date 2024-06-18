@@ -15,7 +15,7 @@ The meaning of no kernel in the file name is that we do not use the kernel metho
 
 ● ETO: 
 
-Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> Random_policy/ETO/Regret_ETO.csv --> Regret_ETO.xlsx
+Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret_all_Correct_ETO.csv --> Result_processing_example_code.R --> Random_policy/ETO/Regret_ETO.csv --> Random_policy/ETO/Regret_ETO.xlsx
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip: 
 
