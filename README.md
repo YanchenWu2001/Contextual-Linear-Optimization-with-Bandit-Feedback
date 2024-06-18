@@ -32,4 +32,12 @@ Random_policy/Naive_ETO/Naive_ETO.py --> Random_policy/Naive_ETO/regret_all_Corr
 
 ● Naive SPO+ DM
 
-Random_policy/Naive_ETO/Naive_ETO.py -->
+Random_policy/Naive_SPO+DM/Naive_SPO+DM.py --> Random_policy/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> Random_policy/Naive_SPO+DM/Naive_SPO+DM_result.csv --> Random_policy/Naive_SPO+DM/Naive_SPO+DM_result.xlsx
+
+● Naive SPO+ DR
+
+Random_policy/Naive_SPO+DR/Naive_SPO+DR.py --> Random_policy/regret_no_kernel_CDR & regret_no_kernel_Wrong_CDR --> Result_processing_example_code.R --> Random_policy/Naive_SPO+DR/Naive_SPO+DR_result.csv --> Random_policy/Naive_SPO+DR/Naive_SPO+DR_result.xlsx
+
+● Naive SPO+ IPW
+
+Random_policy/Naive_SPO+IPW/Naive_SPO+IPW.py --> Random_policy/Naive_SPO+IPW/regret_no_kernel_IPW.csv --> Result_processing_example_code.R --> Random_policy/Naive_SPO+IPW/Naive_SPO+IPW_result.csv --> Random_policy/Naive_SPO+IPW/Naive_SPO+IPW_result.xlsx
