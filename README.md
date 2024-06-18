@@ -19,8 +19,7 @@ Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip: 
 
-Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv & regret_no_kernel_Sample_Double_Robust.csv & 
-regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.xlsx
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv & regret_no_kernel_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.xlsx
 
 ● SPO+ ISW
 
@@ -54,15 +53,34 @@ Random_policy/ETO/ETO.py --> Random_policy/ETO/regret_all_Wrong_ETO.csv & regret
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip (Nuisance Model $F^{\text{N}}$ is well-specified and Policy-inducing model $F$ is misspecified degree 4) : 
 
-Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv & regret_no_kernel_Sample_Double_Robust.csv & 
-regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.xlsx
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv & regret_no_kernel_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_well_specified_result.xlsx
 
-● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip (Nuisance Model $F^{\text{N}}$ is misspecified degree 4 and Policy-inducing model $F$ is well-specified or Nuisance Model $F^{\text{N}}$ and Nuisance Model $F^{\text{N}}$ are both misspecified degree 4) : 
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip 
 
-Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Sample_Double_Robust.csv & 
-regret_no_kernel_Lambda_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Clip_Linear_Wrong_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_misspecified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_misspecified_result.xlsx
+Nuisance Model $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified 
+
+or 
+
+Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4: 
+
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Clip_Linear_Wrong_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_misspecified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_misspecified_result.xlsx
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip (Nuisance Model $F^{\text{N}}$ is well-specified and Policy-inducing model $F$ is misspecified degree 2) : 
 
-Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/SPO+DM_DR_PI_Lamdba_Clip_misspecified.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv & regret_no_kernel_Sample_Double_Robust.csv & 
-regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_well_specified_result.xlsx
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/SPO+DM_DR_PI_Lamdba_Clip_misspecified2.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Direct_Model.csv & regret_no_kernel_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Sample_Double_Robust.csv & regret_no_kernel_Clip_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_well_specified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_well_specified_result.xlsx
+
+● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip 
+
+Nuisance Model $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified 
+
+or 
+
+Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2: 
+
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/SPO+DM_DR_PI_Lamdba_Clip_misspecified2.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Clip_Linear_Wrong_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_misspecified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_misspecified_result.xlsx
+
+● Naive SPO+ DM (Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 4 or $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified or Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4):
+
+Random_policy/Naive_SPO+DM/Naive_SPO+DM.py --> Random_policy/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> Random_policy/Naive_SPO+DM/Naive_SPO+DM_result.csv --> Random_policy/Naive_SPO+DM/Naive_SPO+DM_result.xlsx
+
+● Naive SPO+ DM (Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 2 or $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified or Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2):
