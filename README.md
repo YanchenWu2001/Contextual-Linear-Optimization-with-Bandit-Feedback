@@ -57,11 +57,9 @@ Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_po
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip 
 
-Nuisance Model $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified 
+1. Nuisance Model $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified 
 
-or 
-
-Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4: 
+2. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4: 
 
 Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Clip_Linear_Wrong_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_misspecified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/Nuisance_model_misspecified_result.xlsx
 
@@ -71,16 +69,27 @@ Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/SPO+DM_DR_PI_Lamdba_Clip_mi
 
 ● SPO+ DM & SPO+ DR PI & SPO+ DR Lambda & SPO+ DR Clip 
 
-Nuisance Model $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified 
+1. Nuisance Model $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified 
 
-or 
+2. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2: 
 
-Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2: 
+Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/SPO+DM_DR_PI_Lamdba_Clip_misspecified2.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Clip_Linear_Wrong_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_misspecified2_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_misspecified2_result.xlsx
 
-Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/SPO+DM_DR_PI_Lamdba_Clip_misspecified2.py --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip/regret_no_kernel_Linear_Wrong_Direct_Model.csv &  regret_no_kernel_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Lambda_Linear_Wrong_Sample_Double_Robust.csv & regret_no_kernel_Clip_Linear_Wrong_Sample_Double_Robust.csv --> Result_processing_example_code.R --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_misspecified_result.csv --> Random_policy/SPO+DM_DR_PI_Lamdba_Clip_misspecified2/Nuisance_model_misspecified_result.xlsx
+● Naive SPO+ DM 
 
-● Naive SPO+ DM (Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 4 or $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified or Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4):
+1. Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 4
+2. $F^{\text{N}}$ is misspecified degree 4, Policy-inducing model $F$ is well-specified
+3. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 4:
 
 Random_policy/Naive_SPO+DM/Naive_SPO+DM.py --> Random_policy/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> Random_policy/Naive_SPO+DM/Naive_SPO+DM_result.csv --> Random_policy/Naive_SPO+DM/Naive_SPO+DM_result.xlsx
 
-● Naive SPO+ DM (Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 2 or $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified or Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2):
+● Naive SPO+ DM 
+
+1. Nuisance Model $F^{\text{N}}$ is well-specified, Policy-inducing model $F$ is misspecified degree 2
+2. $F^{\text{N}}$ is misspecified degree 2, Policy-inducing model $F$ is well-specified
+3. Nuisance Model $F^{\text{N}}$, Nuisance Model $F^{\text{N}}$ are both misspecified degree 2:
+
+Random_policy/Naive_SPO+DM_misspecified2/Naive_SPO+DM_misspecified2.py --> Random_policy/regret_no_kernel_CDM & regret_no_kernel_Wrong_CDM --> Result_processing_example_code.R --> Random_policy/Naive_SPO+DM_misspecified2/Naive_SPO+DM_misspecified2_result.csv --> Random_policy/Naive_SPO+DM_misspecified2/Naive_SPO+DM_misspecified2_result.xlsx
+
+
+
