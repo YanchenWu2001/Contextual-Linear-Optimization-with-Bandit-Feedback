@@ -25,7 +25,7 @@ Random_policy/SPO+DM_DR_PI_Lamdba_Clip/SPO+DM_DR_PI_Lamdba_Clip.py --> Random_po
 
 ● SPO+ ISW
 
-Random_policy/SPO+ISW/SPO+ISW.py --> Random_policy/SPO+ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> Random_policy/ETO/SPO+ISW_result.csv --> Random_policy/ETO/SPO+ISW_result.xlsx
+Random_policy/SPO+ISW/SPO+ISW.py --> Random_policy/SPO+ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> Random_policy/SPO+ISW/SPO+ISW_result.csv --> Random_policy/SPO+ISW/SPO+ISW_result.xlsx
 
 ● Naive ETO
 
@@ -123,7 +123,7 @@ X1_policy/X1_SPO+DM_DR_PI_Lamdba_Clip/X1_SPO+DM_DR_PI_Lamdba_Clip.py --> X1_poli
 
 ● SPO+ ISW
 
-X1_policy/X1_SPO+ISW/X1_SPO+ISW.py --> X1_policy/X1_SPO+ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> X1_policy/X1_ETO/X1_SPO+ISW_result.csv --> X1_policy/X1_ETO/X1_SPO+ISW_result.xlsx
+X1_policy/X1_SPO+ISW/X1_SPO+ISW.py --> X1_policy/X1_SPO+ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> X1_policy/X1_SPO+ISW/X1_SPO+ISW_result.csv --> X1_policy/X1_SPO+ISW/X1_SPO+ISW_result.xlsx
 
 ● Naive ETO
 
@@ -221,7 +221,7 @@ X1X2_policy/X1X2_SPO+DM_DR_PI_Lamdba_Clip/X1X2_SPO+DM_DR_PI_Lamdba_Clip.py --> X
 
 ● SPO+ ISW
 
-X1X2_policy/X1X2_SPO+ISW/X1X2_SPO+ISW.py --> X1X2_policy/X1X2_SPO+ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> X1X2_policy/X1X2_ETO/X1X2_SPO+ISW_result.csv --> X1X2_policy/X1X2_ETO/X1X2_SPO+ISW_result.xlsx
+X1X2_policy/X1X2_SPO+ISW/X1X2_SPO+ISW.py --> X1X2_policy/X1X2_SPO+ISW/regret_no_kernel_ISW_Sample.csv --> Result_processing_example_code.R --> X1X2_policy/X1X2_SPO+ISW/X1X2_SPO+ISW_result.csv --> X1X2_policy/X1X2_SPO+ISW/X1X2_SPO+ISW_result.xlsx
 
 ● Naive ETO
 
