@@ -11,7 +11,7 @@ The X1X2_policy file corresponds to Tables 7 and 8 in the appendix.
 
 File name interpretation
 
-The meaning of no kernel in the file name is that we do not use the kernel method, the meaning of tree is that we use the decision tree model to learn the policy in X1_policy and X1X2_policy settings, the meaning of Sample is to estimate the policy according to the probability of occurrence of historical data in Random policy setting, and the meaning of Linear Wrong is using the misspecified Nuisance model.
+"No kernel" means that we do not use the kernel method. "Tree" means that we use the decision tree model to learn the policy in X1_policy and X1X2_policy settings. "Sample" means that we estimate probability of each path/decision given contexts from sample data. "Linear Wrong" means that we use the misspecified Nuisance model.
 
 ### Table 1 and 3
 
